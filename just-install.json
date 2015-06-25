@@ -9,26 +9,6 @@
                 "x86_64": "http://dl.7-zip.org/7z938-x64.msi"
             }
         },
-        "advancedinstaller": {
-            "version": "latest",
-            "installer": {
-                "kind": "msi",
-                "x86": "http://www.advancedinstaller.com/downloads/advinst.msi",
-                "options": {
-                    "shims": ["{{.ProgramFilesx86}}\\Caphyon\\Advanced Installer 11.6.3\\bin\\x86\\AdvancedInstaller.com"]
-                }
-            }
-        },
-        "atom": {
-            "version": "0.177.0",
-            "installer": {
-                "kind": "as-is",
-                "x86": "https://github.com/atom/atom/releases/download/v{{.version}}/AtomSetup.exe",
-                "options": {
-                    "shims": ["{{.LocalAppData}}\\atom\\app-{{.version}}\\atom.exe"]
-                }
-            }
-        },
         "autohotkey": {
             "version": "1.0.48.05",
             "installer": {
@@ -667,20 +647,6 @@
             "installer": {
                 "kind": "as-is",
                 "x86": "http://download.microsoft.com/download/A/5/4/A54BADB6-9C3F-478D-8657-93B3FC9FE62D/vcsetup.exe"
-            }
-        },
-        "vc2008redist": {
-            "version": "2008",
-            "installer": {
-                "kind": "as-is",
-                "x86": "http://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe"
-            }
-        },
-        "vc2008redist-sp1": {
-            "version": "2008sp1",
-            "installer": {
-                "kind": "as-is",
-                "x86": "http://download.microsoft.com/download/d/d/9/dd9a82d0-52ef-40db-8dab-795376989c03/vcredist_x86.exe"
             }
         },
         "vc-python": {
