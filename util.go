@@ -32,10 +32,20 @@ func expandString(s string, context map[string]string) string {
 		data[k] = v
 	}
 
+	// We expect some variables to be defined
+	mustBeDefined := func(lookup string) {
+		if v, ok := data[lookup]; !ok && v == "" {
+			panic(fmt.Sprintf("Environment variable %s is not defined", lookup))
+		}
+	}
+
+	mustBeDefined("ProgramFiles")
+	mustBeDefined("ProgramFilesx86")
+	mustBeDefined("SystemDrive")
+
+	// Expand string
 	var buf bytes.Buffer
-
 	template.Must(template.New("expand").Parse(s)).Execute(&buf, data)
-
 	return buf.String()
 }
 
